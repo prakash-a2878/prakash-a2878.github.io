@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash | Instructional Designer & Technical Content Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f7f8fa;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #4b5563;
+            max-width: 720px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .secondary {
+            border: 1px solid #2563eb;
+            color: #2563eb;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 34px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .section-intro {
+            color: #6b7280;
+            margin-bottom: 35px;
+            max-width: 750px;
+        }
+
+        .about {
+            background: #f7f8fa;
+        }
+
+        .skills-grid,
+        .projects-grid,
+        .samples-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .card p {
+            color: #4b5563;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #eef2ff;
+            color: #3730a3;
+            padding: 9px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .experience-item {
+            background: white;
+            border-left: 4px solid #2563eb;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+
+        .experience-item h3 {
+            margin-bottom: 5px;
+        }
+
+        .experience-item .date {
+            color: #2563eb;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .experience-item p {
+            color: #4b5563;
+        }
+
+        .contact {
+            background: #111827;
+            color: white;
+            text-align: center;
+            max-width: none;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            color: #d1d5db;
+            margin-bottom: 25px;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #374151;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .samples-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Prakash</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#samples">Work Samples</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HOME -->
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <h1>Prakash</h1>
+
+            <h2>
+                Instructional Designer | Technical Content Developer
+            </h2>
+
+            <p>
+                I design learning experiences and technical content
+                across programming, data science, generative AI,
+                cybersecurity, and computing.
+            </p>
+
+            <div class="buttons">
+                <a class="btn primary" href="#projects">
+                    View My Projects
+                </a>
+
+                <a class="btn secondary" href="#contact">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="section-intro">
+            I am an Instructional Designer and technical content
+            developer with a background in Computer Science and
+            experience developing learning content for computing
+            and technology subjects.
+        </p>
+
+        <p>
+            My work includes curriculum development, instructional
+            design, technical content development, learning
+            activities, assessments, and educational materials.
+        </p>
+
+        <br>
+
+        <p>
+            I also work with Python, SQL, data analysis, data science,
+            generative AI, and cybersecurity concepts. I enjoy
+            converting technical concepts into clear and practical
+            learning experiences.
+        </p>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">Skills</h2>
+
+        <p class="section-intro">
+            My skills cover instructional design, technical content,
+            programming, and data related technologies.
+        </p>
+
+        <div class="skills-list">
+
+            <span class="skill">Instructional Design</span>
+            <span class="skill">Curriculum Development</span>
+            <span class="skill">Storyboarding</span>
+            <span class="skill">Learning Objectives</span>
+            <span class="skill">Assessment Design</span>
+            <span class="skill">Technical Content Development</span>
+
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+            <span class="skill">NumPy</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Data Science</span>
+
+            <span class="skill">Generative AI</span>
+            <span class="skill">LLMs</span>
+            <span class="skill">Cybersecurity</span>
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="about">
+
+        <h2 class="section-title">Projects</h2>
+
+        <p class="section-intro">
+            Selected projects demonstrating my technical and
+            instructional design skills.
+        </p>
+
+        <div class="projects-grid">
+
+            <div class="card">
+                <h3>FIFA 21 Data Science Project</h3>
+
+                <p>
+                    An end-to-end data science project using the
+                    FIFA 21 dataset. The project includes data
+                    cleaning, exploratory data analysis, correlation
+                    analysis, feature engineering, and machine
+                    learning.
+                </p>
+
+                <br>
+
+                <a href="#" class="btn secondary">
+                    Project Details
+                </a>
+            </div>
+
+
+            <div class="card">
+                <h3>Python Programming Projects</h3>
+
+                <p>
+                    Python projects covering programming fundamentals,
+                    data structures, object oriented programming,
+                    file handling, and practical problem solving.
+                </p>
+
+                <br>
+
+                <a href="#" class="btn secondary">
+                    View Projects
+                </a>
+            </div>
+
+
+            <div class="card">
+                <h3>SQL and Database Projects</h3>
+
+                <p>
+                    Practical SQL and database projects covering
+                    database design, relationships, joins, keys,
+                    normalization, and data analysis.
+                </p>
+
+                <br>
+
+                <a href="#" class="btn secondary">
+                    View Projects
+                </a>
+            </div>
+
+
+            <div class="card">
+                <h3>Technical Learning Modules</h3>
+
+                <p>
+                    Learning modules covering computing topics such
+                    as cybersecurity, generative AI, programming,
+                    databases, and data science.
+                </p>
+
+                <br>
+
+                <a href="#samples" class="btn secondary">
+                    View Samples
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORK SAMPLES -->
+
+    <section id="samples">
+
+        <h2 class="section-title">Instructional Design Work Samples</h2>
+
+        <p class="section-intro">
+            Examples of instructional design and technical learning
+            materials that can be added to this portfolio.
+        </p>
+
+        <div class="samples-grid">
+
+            <div class="card">
+                <h3>Course Design</h3>
+                <p>
+                    Course structures, learning outcomes, session
+                    plans, and curriculum mapping.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Storyboards</h3>
+                <p>
+                    Storyboards that show learning content,
+                    activities, interactions, and assessments.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Learning Activities</h3>
+                <p>
+                    Practical activities designed to help learners
+                    apply technical concepts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Assessments</h3>
+                <p>
+                    Knowledge checks, scenario based questions,
+                    quizzes, and practical assessments.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience" class="about">
+
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-item">
+
+            <h3>Instructional Designer & Content Developer</h3>
+
+            <div class="date">
+                Britts Imperial Education Services
+            </div>
+
+            <p>
+                Developing learning content for computing
+                qualifications and educational programmes, including
+                curriculum content, instructional materials,
+                activities, and assessments.
+            </p>
+
+        </div>
+
+
+        <div class="experience-item">
+
+            <h3>SME / Technical Content Developer</h3>
+
+            <div class="date">
+                Previous EdTech Experience
+            </div>
+
+            <p>
+                Developed and reviewed technical learning content
+                covering programming, data science, generative AI,
+                DevOps, databases, and related computing subjects.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section>
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="card">
+
+            <h3>M.Tech in Computer Science and Engineering</h3>
+
+            <p>
+                Indian Institute of Technology Madras
+            </p>
+
+        </div>
+
+        <br>
+
+        <div class="card">
+
+            <h3>B.E. in Computer Science and Engineering</h3>
+
+            <p>
+                Government Engineering College
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+        <p>
+            I am open to opportunities in instructional design,
+            technical content development, Python, and data related
+            roles.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+
+            <a class="btn primary"
+               href="mailto:YOUR_EMAIL@example.com">
+                Email Me
+            </a>
+
+            <a class="btn secondary"
+               href="https://github.com/prakash-a2878"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a class="btn secondary"
+               href="YOUR_LINKEDIN_URL"
+               target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Prakash. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
